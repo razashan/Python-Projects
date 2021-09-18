@@ -44,7 +44,7 @@ def SearchData(MTy="",Ref=" ",Tit="",fna="",sna="",Adr1="",Adr2="",pcd="",MNo=""
     con.close()
     return  rows
 
-def SearchData(id,MTy="",Ref=" ",Tit="",fna="",sna="",Adr1="",Adr2="",pcd="",MNo="",BkID="",Bkt="",Atr="",DBo="",Ddu="",sPr="",LrF="",DoD="",DonL=""):
+def dataUpdate(id,MTy="",Ref=" ",Tit="",fna="",sna="",Adr1="",Adr2="",pcd="",MNo="",BkID="",Bkt="",Atr="",DBo="",Ddu="",sPr="",LrF="",DoD="",DonL=""):
     con =sqlite3.connect("libbooks.db")
     cur = con.cursor()
     cur.execute("UPDATE libbooks  SET MTy =?,REF=?,TIT=?, FNA=?,SNA=?,ADR1=? ,ADR2=?,PCD=?,MNO=?, BKID=?,BKT = ?,ATR=? ,DBO=?,DDU=?,SPR=?,LRF=?,DOD=?,DONL=? WHERE id=?",
